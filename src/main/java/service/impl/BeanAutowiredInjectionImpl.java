@@ -8,6 +8,7 @@ public class BeanAutowiredInjectionImpl implements BeanAutowiredInjection {
 
     @Override
     public String autowiredByName() {
+
         return "autowiredByName";
     }
 
