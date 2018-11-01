@@ -50,4 +50,20 @@ public class Solution {
             }
         }
     }
+
+    /**
+     * 求一颗二叉树的最大深度
+     * @param root
+     * @return
+     */
+    public int maxDepth(TreeNode root) {
+        if (null == root) {
+            return 0;
+        }
+        int leftDepth = maxDepth(root.leftChildren);
+        int rightDepth = maxDepth(root.rightChildren);
+        return leftDepth > rightDepth ? leftDepth + 1 : rightDepth + 1;
+    }
+
+
 }
