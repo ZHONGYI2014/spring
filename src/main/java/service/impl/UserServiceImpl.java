@@ -10,6 +10,12 @@ import service.UserService;
 
 public class UserServiceImpl implements UserService {
 
+    private String beanName;
+
+    public void setBeanName(String beanName) {
+        this.beanName = beanName;
+    }
+
     private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     public UserServiceImpl() {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-lazy-init="true">
+
+    <!-- 构造方法注入 -->
+    <!--<bean id="newsProvider" class="bean.NewsProvider">-->
+        <!--&lt;!&ndash; 当某个对象的构造方法同时传入多个类型相同的参数时, 如果配置项信息和顺序不对应, 可以通过index 属性指定顺序 &ndash;&gt;-->
+        <!--<constructor-arg index="0">-->
+            <!--<ref bean="newsListener"/>-->
+        <!--</constructor-arg>-->
+        <!--&lt;!&ndash; 通过类型判断形参 &ndash;&gt;-->
+        <!--<constructor-arg type="java.lang.String">-->
+            <!--<value>welcome to CCTV-13</value>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!-- setter 方法注入  -->
+    <bean id="newsProvider" class="bean.NewsProvider">
+        <property name="newsListener" ref = "newsListener"/>
+        <property name="msg" value="welcome to china"/>
+    </bean>
+    <bean id = "newsListener" class="bean.NewsListener"/>
+
+    <bean id = "resourceLoader" class = "org.springframework.core.io.DefaultResourceLoader"/>
+    <bean id= "fooBar" class = "bean.FooBar">
+        <property name="resourceLoader">
+            <ref bean = "resourceLoader"/>
+        </property>
+    </bean>
+
+
+</beans>
