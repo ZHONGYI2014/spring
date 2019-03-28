@@ -14,7 +14,7 @@ public class Character extends DefaultA {
     public static void main(String[] args) {
         User user1 = new User("gloula","13570901234","478741233@qq.com");
         User user2 = new User("mengtasha","13842267843","478741234@qq.com");
-        User user3 = new User("qqw","15270895432","478741235@qq.com");
+        User user3 = new User("hope","15270895432","478741235@qq.com");
 
         List<String> list = Arrays.asList("spring","node","mkyong");
         System.out.println(list.size());

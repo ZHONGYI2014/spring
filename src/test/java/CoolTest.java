@@ -23,11 +23,8 @@ public class CoolTest {
 
     @Test
     public void assertTest() {
-        String[] m = new String[3];
-        m[0] = "1";
-        m[1] = "2";
-        m[2] = "3";
-        sayHi(m);
+        Long tmp = (long)(Math.random() * 10000);
+        System.out.println(tmp);
     }
 
     public void sayHi(String ... ss) {

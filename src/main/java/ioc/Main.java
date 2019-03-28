@@ -1,5 +1,6 @@
 package ioc;
 
+import bean.MockDemoObject;
 import domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.HierarchicalBeanFactory;
@@ -16,12 +17,13 @@ import service.impl.UserServiceImpl;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class Main {
 
     public static void main(String[] args) {
-        initializeIOC();
-      //fileSystemXmlApplicationContext();
+      //  initializeIOC();
+      fileSystemXmlApplicationContext();
 
     }
 
@@ -54,13 +56,13 @@ public class Main {
     }
 
     public static void fileSystemXmlApplicationContext() {
-        //路径需要使用双斜杠
-        String path = "//Users//pengy//myProjects//spring//src//main//resources//spring.xml";
-        String path2 = "//Users//pengy//myProjects//spring//src//main//resources//spring-test.xml";
         //可以传多个配置文件，配置多个容器
-        ApplicationContext context = new FileSystemXmlApplicationContext(path);
+        URL url = Main.class.getClassLoader().getResource("spring.xml");
+        String filePath = url.getPath().replaceAll("/", "//");
+        ApplicationContext context = new FileSystemXmlApplicationContext(filePath);
         UserService service = context.getBean(UserServiceImpl.class);
         User user = service.getUserByName("cool");
         System.out.println(user.getUserPhone());
+
     }
 }

@@ -25,7 +25,7 @@ public class HelloController {
     @ResponseBody
     public String hello() {
         logger.info(service.autowiredByName());
-        logger.info("hi~ wqq");
+        logger.info("");
         logger.info("lucy");
         logger.info("haliluya");
         return "fresh blood";

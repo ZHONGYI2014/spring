@@ -6,15 +6,19 @@ public class TimeUtil {
 
     private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
-    public static void main(String[] args) {
-        Long longDate = 1543968000000L;
-        convertToFormatTime(longDate);
+    public static String convertToFormatTime(Long longDate) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(TIME_FORMAT);
+        return simpleDateFormat.format(longDate);
     }
 
-    public static void convertToFormatTime(Long longDate) {
+    /**
+     * 获取当前时间
+     * @return 转换成字符串格式
+     */
+    public static String getCurrentTime() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(TIME_FORMAT);
-        String currentTime = simpleDateFormat.format(longDate);
-        System.out.println(currentTime);
+        return simpleDateFormat.format(System.currentTimeMillis());
     }
+
 
 }

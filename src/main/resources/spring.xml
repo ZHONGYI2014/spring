@@ -4,10 +4,34 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+
+    <!--<import resource="spring-mybatis.xml"/>-->
+
     <!--  lazy-init懒加载默认值为 false -->
     <bean id="userService" class="service.impl.UserServiceImpl">
         <property name="beanName">
             <value>QQSmiling123</value>
         </property>
     </bean>
+
+    <bean id="mockDemoObject" class="bean.MockDemoObject">
+        <property name="array">
+            <array>
+                <value>123</value>
+                <value>456</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>listhaha</value>
+            </list>
+        </property>
+        <property name="map">
+            <props>
+                <prop key="hello">hello kitty</prop>
+            </props>
+        </property>
+    </bean>
+
+
 </beans>
