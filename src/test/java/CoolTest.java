@@ -3,7 +3,6 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.util.Assert;
 
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ public class CoolTest {
 
     @Test
     public void testResource() throws IOException {
-        ClassPathResource res = new ClassPathResource("spring.xml");
+        ClassPathResource res = new ClassPathResource("applicationContext.xml");
         log.info("classLoader :[{}]",res.getClassLoader().toString());
         log.info("URL :[{}]",res.getURL().toString());
         log.info("path :[{}]",res.getPath());

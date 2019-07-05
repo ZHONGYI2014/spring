@@ -1,22 +1,15 @@
 package ioc;
 
-import bean.MockDemoObject;
 import domain.User;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.HierarchicalBeanFactory;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.DefaultResourceLoader;
 import service.UserService;
 import service.impl.UserServiceImpl;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 
 public class Main {
@@ -35,7 +28,7 @@ public class Main {
         //------------------------------------------------------------------------
         //  step1. 定位资源
         //------------------------------------------------------------------------
-        ClassPathResource res = new ClassPathResource("spring.xml");
+        ClassPathResource res = new ClassPathResource("applicationContext.xml");
         //------------------------------------------------------------------------
         //  step2. 创建容器
         //      1) DefaultListableBeanFactory 实现了 BeanDefinitionRegistry 接口
@@ -57,12 +50,14 @@ public class Main {
 
     public static void fileSystemXmlApplicationContext() {
         //可以传多个配置文件，配置多个容器
-        URL url = Main.class.getClassLoader().getResource("spring.xml");
+        URL url = Main.class.getClassLoader().getResource("applicationContext.xml");
         String filePath = url.getPath().replaceAll("/", "//");
         ApplicationContext context = new FileSystemXmlApplicationContext(filePath);
+
+       // ApplicationContext context1 = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService service = context.getBean(UserServiceImpl.class);
         User user = service.getUserByName("cool");
-        System.out.println(user.getUserPhone());
+        System.out.println("Main result : " + user.getUserPhone());
 
     }
 }

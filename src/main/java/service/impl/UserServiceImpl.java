@@ -5,10 +5,15 @@ import ioc.DefaultA;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import service.DemoService;
 import service.UserService;
 
 
 public class UserServiceImpl implements UserService {
+
+
+    @Autowired
+    private DemoService demoService;
 
     private String beanName;
 
@@ -29,6 +34,7 @@ public class UserServiceImpl implements UserService {
         user.setUserPhone("15070951346");
         user.setUserEmail("478741233@qq.com");
         logger.info("userName: {}", user.getUserName());
+        demoService.getServiceName();
         return user;
     }
 }
