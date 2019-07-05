@@ -1,4 +1,4 @@
-package service;
+package com.service;
 
 import domain.User;
 

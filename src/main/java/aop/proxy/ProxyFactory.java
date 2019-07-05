@@ -1,10 +1,11 @@
 package aop.proxy;
 
 
+import com.service.UserService;
+import com.service.impl.UserServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import service.UserService;
-import service.impl.UserServiceImpl;
+
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

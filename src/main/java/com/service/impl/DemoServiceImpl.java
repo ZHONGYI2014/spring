@@ -1,8 +1,8 @@
-package service.impl;
+package com.service.impl;
 
+import com.service.DemoService;
+import com.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import service.DemoService;
-import service.UserService;
 
 public class DemoServiceImpl implements DemoService {
 

@@ -1,12 +1,11 @@
-package service.impl;
+package com.service.impl;
 
+import com.service.DemoService;
+import com.service.UserService;
 import domain.User;
-import ioc.DefaultA;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import service.DemoService;
-import service.UserService;
 
 
 public class UserServiceImpl implements UserService {

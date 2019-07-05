@@ -1,5 +1,7 @@
 package ioc;
 
+import com.service.UserService;
+import com.service.impl.UserServiceImpl;
 import domain.User;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -7,8 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
-import service.UserService;
-import service.impl.UserServiceImpl;
+
 
 import java.net.URL;
 

@@ -15,8 +15,17 @@
 
     <!-- 默认的注解映射的支持 -->
     <mvc:annotation-driven/>
-    <context:component-scan base-package="controller" use-default-filters="false">
+    <context:component-scan base-package="com.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
+
+    <!-- 登陆拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 需要拦截的接口 -->
+            <mvc:mapping path="/user/*"/>
+            <bean id="loginInterceptor" class = "com.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>

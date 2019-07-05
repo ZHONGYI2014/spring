@@ -1,7 +1,7 @@
-package service.impl;
+package com.service.impl;
 
+import com.service.BeanAutowiredInjection;
 import org.springframework.stereotype.Service;
-import service.BeanAutowiredInjection;
 
 @Service
 public class BeanAutowiredInjectionImpl implements BeanAutowiredInjection {
