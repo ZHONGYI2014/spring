@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.interceptor.AuthNHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -15,7 +16,8 @@ public class UserController {
     @RequestMapping("/login")
     @ResponseBody
     public String login() {
-        System.out.println("this is login method!!!");
+        logger.info("threadId: " + Thread.currentThread().getId());
+        logger.info(AuthNHolder.userName());
         return "GOOD";
     }
 }

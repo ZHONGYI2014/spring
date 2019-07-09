@@ -31,4 +31,9 @@ public class Info {
     public void setDept(String dept) {
         this.dept = dept;
     }
+
+    @Override
+    public String toString() {
+        return "id = " + id + " name = " + name + "dept" + dept;
+    }
 }

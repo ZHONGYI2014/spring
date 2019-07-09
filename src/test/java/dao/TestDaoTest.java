@@ -2,6 +2,7 @@ package dao;
 
 import bean.Info;
 import com.alibaba.fastjson.JSON;
+import com.dao.TestDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
