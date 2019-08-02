@@ -1,8 +1,0 @@
-CoolTest.class
-tree/NodeTest.class
-tree/SolutionTest.class
-exception/ServerExceptionTest.class
-service/UserServiceTest.class
-exception/BaseExceptionTest.class
-dao/TestDaoTest.class
-springTest.class

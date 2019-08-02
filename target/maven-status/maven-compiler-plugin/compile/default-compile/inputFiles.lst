@@ -1,5 +1,6 @@
 /Users/pengy/myProjects/spring/src/main/java/constant/HttpStatusCodes.java
 /Users/pengy/myProjects/spring/src/main/java/bean/NewsProvider.java
+/Users/pengy/myProjects/spring/src/main/java/com/dao/TestDao.java
 /Users/pengy/myProjects/spring/src/main/java/com/service/impl/UserServiceImpl.java
 /Users/pengy/myProjects/spring/src/main/java/com/service/impl/BeanAutowiredInjectionImpl.java
 /Users/pengy/myProjects/spring/src/main/java/com/interceptor/LoginInterceptor.java
@@ -14,9 +15,9 @@
 /Users/pengy/myProjects/spring/src/main/java/bean/FooBar.java
 /Users/pengy/myProjects/spring/src/main/java/ioc/DefaultA.java
 /Users/pengy/myProjects/spring/src/main/java/enums/ServerExceptionEnum.java
-/Users/pengy/myProjects/spring/src/main/java/dao/TestDao.java
 /Users/pengy/myProjects/spring/src/main/java/thread/SynchronizedService.java
 /Users/pengy/myProjects/spring/src/main/java/thread/CountDownLatchTest.java
+/Users/pengy/myProjects/spring/src/main/java/com/controller/UserController.java
 /Users/pengy/myProjects/spring/src/main/java/tree/Solution.java
 /Users/pengy/myProjects/spring/src/main/java/com/service/impl/DemoServiceImpl.java
 /Users/pengy/myProjects/spring/src/main/java/java8/Character.java
@@ -26,9 +27,12 @@
 /Users/pengy/myProjects/spring/src/main/java/bean/Info.java
 /Users/pengy/myProjects/spring/src/main/java/com/service/UserService.java
 /Users/pengy/myProjects/spring/src/main/java/tree/TreeNode.java
+/Users/pengy/myProjects/spring/src/main/java/util/URLParser.java
+/Users/pengy/myProjects/spring/src/main/java/com/controller/UserInfo.java
 /Users/pengy/myProjects/spring/src/main/java/interceptor/TimeInterceptor.java
 /Users/pengy/myProjects/spring/src/main/java/lock/DeadLock.java
 /Users/pengy/myProjects/spring/src/main/java/com/service/DemoService.java
+/Users/pengy/myProjects/spring/src/main/java/com/interceptor/AuthNHolder.java
 /Users/pengy/myProjects/spring/src/main/java/tree/Node.java
 /Users/pengy/myProjects/spring/src/main/java/exception/ServerException.java
 /Users/pengy/myProjects/spring/src/main/java/thread/SleepThread.java
