@@ -90,7 +90,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.1.8</version>
+            <version>1.2.0</version>
         </dependency>
 
         <!-- web 文件中的listen 监听需要用到 -->
